@@ -45,7 +45,7 @@ MODEL_DESCRIPTIONS = {
     ),
 }
 
-st.set_page_config(page_title="House Price Prediction", page_icon="Assets\logo.png", layout="centered")
+st.set_page_config(page_title="House Price Prediction", page_icon="Assets/logo.png", layout="centered")
 
 # ----------------------------------------------------------------------------
 # Design system — "Blueprint Ledger"
@@ -396,7 +396,7 @@ st.markdown(
 # ----------------------------------------------------------------------------
 st.markdown('<div class="section-label">Data Visualizations</div>', unsafe_allow_html=True)
  
-ASSETS_DIR = "assets"
+ASSETS_DIR = "Assets"
  
  
 def show_viz(filename, caption):
@@ -518,7 +518,7 @@ with c3:
 
 if select_model=="Linear Regression":
     try:
-        model_path="Models\model_lr.pkl"
+        model_path="Models/model_lr.pkl"
         model = load_model(model_path)
     except FileNotFoundError:
         st.error(f"Couldn't find **{model_path}**. Place your pickled model next to app.py.")
@@ -529,7 +529,7 @@ if select_model=="Linear Regression":
 
 if select_model=="Decision Tree":
     try:
-        model_path="Models\model_dt.pkl"
+        model_path="Models/model_dt.pkl"
         model = load_model(model_path)
     except FileNotFoundError:
         st.error(f"Couldn't find **{model_path}**. Place your pickled model next to app.py.")
@@ -540,7 +540,7 @@ if select_model=="Decision Tree":
 
 if select_model=="Random Forest":
     try:
-        model_path="Models\model_rf.pkl"
+        model_path="Models/model_rf.pkl"
         model = load_model(model_path)
     except FileNotFoundError:
         st.error(f"Couldn't find **{model_path}**. Place your pickled model next to app.py.")
